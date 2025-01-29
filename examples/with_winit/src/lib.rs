@@ -677,7 +677,6 @@ fn run(
         let mut renderer = Renderer::new(
             &render_cx.devices[id].device,
             RendererOptions {
-                surface_format: Some(render_state.surface.format),
                 use_cpu: args.use_cpu,
                 antialiasing_support: AA_CONFIGS.iter().copied().collect(),
                 // We currently initialise on one thread on WASM, but mark this here
